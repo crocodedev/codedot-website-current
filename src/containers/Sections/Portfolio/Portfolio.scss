@@ -1,0 +1,15 @@
+.portfolio-section {
+  padding-bottom: 0;
+
+  @media (min-width: 768px) {
+    padding-bottom: 120px;
+  }
+
+  * {
+    z-index: 2;
+  }
+}
+
+.portfolio-date:first-letter {
+  text-transform: uppercase;
+}

@@ -1,0 +1,26 @@
+.language-selector {
+  [role="button"] {
+    padding-left: 0;
+  }
+
+  #language-dropdown {
+    color: $primary !important;
+
+    @media (min-width: 992px) {
+      color: $gray-900 !important;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $white;
+  }
+
+  .dropdown-item {
+    color: $gray-900;
+
+    &:hover, &.active, &:focus {
+      color: $primary !important;
+      background-color: transparent;
+    }
+  }
+}
