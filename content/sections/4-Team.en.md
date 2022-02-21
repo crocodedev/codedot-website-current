@@ -40,5 +40,11 @@ teamMember: [
     subheader: "Front-end Developer",
     social: {}
   },
+  {
+    imageFileName: "team/7.jpg",
+    header: "Yuri",
+    subheader: "Front-end Developer",
+    social: {}
+  },
 ]
 ---
