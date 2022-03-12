@@ -53,7 +53,7 @@ const Contact = ({ className, frontmatter, langKey }) => {
           <Map
             className="contact-map"
             state={{
-              center: [55.15804, 30.214017],
+              center: [50.037347, 22.00497],
               zoom: 4,
               behaviors: [`disable('scrollZoom')`],
             }}
@@ -63,7 +63,7 @@ const Contact = ({ className, frontmatter, langKey }) => {
             }}
           >
             <Placemark
-              geometry={[55.15815, 30.2139]}
+              geometry={[50.037457, 22.004853]}
               properties={{
                 iconContent: '',
                 balloonContent: balloon,

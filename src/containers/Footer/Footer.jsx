@@ -7,7 +7,7 @@ const Footer = ({ frontmatter }) => {
   const { copyright } = frontmatter
 
   const yearNow = new Date().getFullYear()
-  const yearCopy = yearNow > 2020 ? `2020 - ${yearNow}` : '2020'
+  const yearCopy = yearNow > 2022 ? `2022 - ${yearNow}` : '2022'
 
   return (
     <footer className="footer py-3">
