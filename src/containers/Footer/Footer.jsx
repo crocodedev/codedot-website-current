@@ -6,15 +6,12 @@ const Footer = ({ frontmatter }) => {
   if (!frontmatter) return null
   const { copyright } = frontmatter
 
-  const yearNow = new Date().getFullYear()
-  const yearCopy = yearNow > 2022 ? `2022 - ${yearNow}` : '2022'
-
   return (
     <footer className="footer py-3">
       <Container>
         <Row className="align-items-center text-center">
           <Col className="w-100">
-            © {yearCopy} {copyright}
+            © {new Date().getFullYear()} {copyright}
           </Col>
         </Row>
       </Container>
