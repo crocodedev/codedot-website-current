@@ -10,7 +10,7 @@ portfolios: [
     subheader: " ",
     content: "https://atomic.vc/",
     extraInfo: "Gatsby, Contentful CMS, Netlify",
-    date: "12/2020"
+    date: "2020-12"
   },
   {
     imageFileName: "portfolio/02-thumbnail.png",
@@ -19,7 +19,7 @@ portfolios: [
     subheader: " ",
     content: "https://bru.beer/",
     extraInfo: "Shopify, Mapbox GL, Klawiyo",
-    date: "11/2020"
+    date: "2020-11"
   },
   {
     imageFileName: "portfolio/03-thumbnail.png",
@@ -28,7 +28,7 @@ portfolios: [
     subheader: " ",
     content: "https://spenco.us/",
     extraInfo: "Gatsby, Odoo",
-    date: "08/2021"
+    date: "2021-08"
   },
   {
     imageFileName: "portfolio/04-thumbnail.png",
@@ -37,7 +37,7 @@ portfolios: [
     subheader: " ",
     content: "https://ttswtrs.com/",
     extraInfo: "Shopify, Shopify Apps",
-    date: "12/2021"
+    date: "2021-12"
   },
   {
     imageFileName: "portfolio/05-thumbnail.jpg",
@@ -46,7 +46,7 @@ portfolios: [
     subheader: " ",
     content: "http://sculptorlash.ru/",
     extraInfo: 'PHP, JavaScript, ocStore CMS (is a OpenCart-based) customization of standard authorization and registration forms, payment systems, development of a meta data generator module, integration with the My Warehouse module, integration of Mega Filter PRO, development of the WishList module, integration with CDEK, integration with Russian Post, integration with the Robocassa service module, customization of the standard administration functionality online store, development of the "Live Search" module, revision of the standard API CMS.',
-    date: "09/2020"
+    date: "2020-09"
   },
   {
     imageFileName: "portfolio/06-thumbnail.jpg",
@@ -55,7 +55,7 @@ portfolios: [
     subheader: " ",
     content: "https://blooming.netlify.app/",
     extraInfo: "Sass, JavaScript, CSS-Animationen, JavaScript-Animationen, Webpack",
-    date: "07/2020"
+    date: "2020-07"
   },
 ]
 ---

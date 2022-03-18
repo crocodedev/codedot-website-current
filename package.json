@@ -6,7 +6,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "cleandev": "yarn clean && yarn develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write **/*.{js,jsx,scss}",
     "serve": "gatsby serve",
     "eslint": "eslint ./src",
     "test": "cross-env NODE_ENV=test yarn run eslint",

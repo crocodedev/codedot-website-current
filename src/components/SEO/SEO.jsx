@@ -42,18 +42,48 @@ const SEO = ({ lang, frontmatter }) => {
       ].concat(
         keywords.length > 0
           ? {
-            name: `keywords`,
-            content: keywords.join(`, `),
-          }
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
           : [],
       )}
     >
-      <link rel="preload" href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEC_I2udQ.woff2" as="font" crossOrigin />
-      <link rel="preload" href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEL_I2udQ.woff2" as="font" crossOrigin />
-      <link rel="preload" href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEM_I2udQ.woff2" as="font" crossOrigin />
-      <link rel="preload" href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEA_I2udQ.woff2" as="font" crossOrigin />
-      <link rel="preload" href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEB_I2udQ.woff2" as="font" crossOrigin />
-      <link rel="preload" href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEP_I0.woff2" as="font" crossOrigin />
+      <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEC_I2udQ.woff2"
+        as="font"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEL_I2udQ.woff2"
+        as="font"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEM_I2udQ.woff2"
+        as="font"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEA_I2udQ.woff2"
+        as="font"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEB_I2udQ.woff2"
+        as="font"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="https://fonts.gstatic.com/s/comfortaa/v34/1PtCg8LJRfWJmhDAuUsSQamb1W0lwk4S4WjMXL830efAesmwYSFoxBEP_I0.woff2"
+        as="font"
+        crossOrigin
+      />
     </Helmet>
   )
 }
