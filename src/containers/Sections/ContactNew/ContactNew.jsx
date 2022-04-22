@@ -155,7 +155,7 @@ const ContactNew = ({ className, frontmatter }) => {
           {...settings}
           width="100%"
           height="100%"
-          mapboxApiAccessToken='pk.eyJ1IjoiYXNwaXJpbi12ZCIsImEiOiJja2d5MjdoczkwOWJ5MnpxdmVhZjVqeGdkIn0.xRipdCN-W4AKwYZQGx4Ovg'
+          mapboxApiAccessToken="pk.eyJ1IjoiYXNwaXJpbi12ZCIsImEiOiJja2d5MjdoczkwOWJ5MnpxdmVhZjVqeGdkIn0.xRipdCN-W4AKwYZQGx4Ovg"
           onViewportChange={(e) => setViewport(e)}
           mapStyle="mapbox://styles/mapbox/light-v9"
         >

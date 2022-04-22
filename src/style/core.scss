@@ -1,9 +1,8 @@
 /* Font Mixins */
 @mixin main-font {
-  font-family:
-    Comfortaa, "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: Comfortaa, 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
 }
 
 /* Variables */
@@ -20,4 +19,4 @@ $gray-800: #343a40 !default;
 $gray-900: #222 !default;
 $black: #000 !default;
 
-$primary: #5988CE !default;
+$primary: #5988ce !default;

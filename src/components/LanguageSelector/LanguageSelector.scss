@@ -1,5 +1,5 @@
 .language-selector {
-  [role="button"] {
+  [role='button'] {
     padding-left: 0;
   }
 
@@ -18,7 +18,9 @@
   .dropdown-item {
     color: $gray-900;
 
-    &:hover, &.active, &:focus {
+    &:hover,
+    &.active,
+    &:focus {
       color: $primary !important;
       background-color: transparent;
     }

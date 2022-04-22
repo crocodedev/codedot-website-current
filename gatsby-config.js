@@ -1,5 +1,15 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const path = require('path')
-const { name, defaultLang } = require('./config/site')
+
+const {
+  DEFAULT_LANG: defaultLang,
+  SITE_ENVIRONMENT: siteEnvironment,
+  GATSBY_NAME: name,
+} = process.env
 
 module.exports = {
   plugins: [
@@ -12,7 +22,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#222222',
         display: 'minimal-ui',
-        icon: 'content/assets/icon.svg',
+        icon: `content-${siteEnvironment}/assets/icon.svg`,
       },
     },
     'gatsby-transformer-remark',
@@ -20,22 +30,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown',
-        path: `${__dirname}/content`,
+        path: `${__dirname}/content-${siteEnvironment}`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/content/assets/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /content/,
-        },
+        path: `${__dirname}/content-${siteEnvironment}/assets/images`,
       },
     },
     'gatsby-plugin-eslint',
@@ -72,14 +74,14 @@ module.exports = {
       options: {
         langKeyDefault: defaultLang,
         useLangKeyLayout: false,
-        pagesPaths: ['/content/'],
+        pagesPaths: [`/content-${siteEnvironment}/`],
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-217807340-1",
+        trackingId: 'UA-217807340-1',
       },
-    }
+    },
   ],
 }

@@ -3,43 +3,44 @@
   width: 100%;
   height: 600px;
 
-
-  [class*="ymaps-"] {
-    &[class*="-ground-pane"] {
+  [class*='ymaps-'] {
+    &[class*='-ground-pane'] {
       //filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale ");
       //-webkit-filter: grayscale(100%);
     }
 
-    &[class*="-balloon__content"] {
+    &[class*='-balloon__content'] {
       padding-top: 1rem;
-      padding-left: 1rem;
       padding-bottom: 1rem;
+      padding-left: 1rem;
     }
 
-    &[class*="-balloon__close-button"] {
+    &[class*='-balloon__close-button'] {
       height: 30px;
     }
 
-    &[class*="-map-copyrights-promo"], &[class*="-copyright"] {
+    &[class*='-map-copyrights-promo'],
+    &[class*='-copyright'] {
       opacity: 50%;
     }
 
-    &[class*="-gototech"] {
+    &[class*='-gototech'] {
       display: none !important;
     }
 
-    &[class*="-balloon"] {
-      background-color: $white;
+    &[class*='-balloon'] {
       color: $gray-900;
-    }
-
-    &[class*="-balloon__tail"]:after {
       background-color: $white;
     }
 
-    &[class*="-balloon__close-button"] {
-      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNCAwLjdMMTMuMyAwTDcgNi4zTDAuNyAwTDAgMC43TDYuMyA3TDAgMTMuM0wwLjcgMTRMNyA3LjdMMTMuMyAxNEwxNCAxMy4zTDcuNyA3TDE0IDAuN1oiIGZpbGw9IiM1OTg4Q0UiLz4KPC9zdmc+Cg==") 50% no-repeat;
+    &[class*='-balloon__tail']:after {
+      background-color: $white;
+    }
+
+    &[class*='-balloon__close-button'] {
       opacity: 1;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNCAwLjdMMTMuMyAwTDcgNi4zTDAuNyAwTDAgMC43TDYuMyA3TDAgMTMuM0wwLjcgMTRMNyA3LjdMMTMuMyAxNEwxNCAxMy4zTDcuNyA3TDE0IDAuN1oiIGZpbGw9IiM1OTg4Q0UiLz4KPC9zdmc+Cg==')
+        50% no-repeat;
     }
   }
 }

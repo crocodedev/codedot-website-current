@@ -1,5 +1,5 @@
 // bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 /* Global styling for this template */
 body {
@@ -31,21 +31,23 @@ h6 {
 }
 
 // Highlight color customization
-::-moz-selection, ::selection {
+::-moz-selection,
+::selection {
   background: $primary;
   text-shadow: none;
 }
 
 img {
-  &::selection, &::-moz-selection {
+  &::selection,
+  &::-moz-selection {
     background: transparent;
   }
 }
 
-
-a:not([href]), a:not([href]):hover {
-  color: inherit;
+a:not([href]),
+a:not([href]):hover {
   text-decoration: none;
+  color: inherit;
 }
 
 /* Components */
@@ -60,20 +62,20 @@ a:not([href]), a:not([href]):hover {
 }
 
 .btn-primary {
-  background-color: $primary;
   border-color: $primary;
+  background-color: $primary;
 
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 7.5%) !important;
     color: white;
+    border-color: darken($primary, 7.5%) !important;
+    background-color: darken($primary, 7.5%) !important;
   }
 
   &:active,
   &:focus {
-    box-shadow: 0 0 0 .2rem rgba(254, 209, 55, .5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
   }
 }
 
@@ -81,23 +83,26 @@ a:not([href]), a:not([href]):hover {
   margin: 0 auto;
 }
 
-.modal-content, .card, .dropdown-menu, .modal-header {
+.modal-content,
+.card,
+.dropdown-menu,
+.modal-header {
   border-width: 0;
   border-radius: 0;
 }
 
 .modal-header .close {
-  margin-top: -.75rem;
+  margin-top: -0.75rem;
   outline: none;
 }
 
 .modal-header {
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 99999;
-  background: rgba(255, 255, 255, .6);
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .modal-body {
@@ -105,30 +110,30 @@ a:not([href]), a:not([href]):hover {
 }
 
 .dropdown-menu {
-  box-shadow: 0 0 30px rgba(33, 37, 41, .1);
+  box-shadow: 0 0 30px rgba(33, 37, 41, 0.1);
 }
 
 .custom-link {
-  color: $primary;
   position: relative;
+  margin-bottom: 3px;
   padding-right: 20px;
   padding-bottom: 2px;
-  margin-bottom: 3px;
+  color: $primary;
 
   &:hover {
-    color: $primary;
     text-decoration: none;
+    color: $primary;
   }
 
   &:after {
-    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
-    height: .5px;
+    height: 0.5px;
+    content: '';
+    transition: 0.3s;
     background: $primary;
-    transition: .3s;
   }
 
   &:hover:after {
@@ -136,14 +141,14 @@ a:not([href]), a:not([href]):hover {
   }
 
   &:before {
-    content: '';
     position: absolute;
     top: 50%;
-    transform: translateY(-45%);
     right: 0;
     width: 16px;
     height: 16px;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTc5OTggNC44MzYwNkwxOS45NTEgNS4yMzYwNkwyMC40NTQgMTUuNTE5MSIgc3Ryb2tlPSIjNTk4OENFIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNS4wMDEgMTkuMjk3TDE5LjA0MSA1LjUzMDAzTDE5LjY0MSA2LjE0MDAzTDUuNiAxOS45MDhMNSAxOS4yOThMNS4wMDEgMTkuMjk3WiIgZmlsbD0iIzU5ODhDRSIvPgo8L3N2Zz4K");
+    content: '';
+    transform: translateY(-45%);
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTc5OTggNC44MzYwNkwxOS45NTEgNS4yMzYwNkwyMC40NTQgMTUuNTE5MSIgc3Ryb2tlPSIjNTk4OENFIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNS4wMDEgMTkuMjk3TDE5LjA0MSA1LjUzMDAzTDE5LjY0MSA2LjE0MDAzTDUuNiAxOS45MDhMNSAxOS4yOThMNS4wMDEgMTkuMjk3WiIgZmlsbD0iIzU5ODhDRSIvPgo8L3N2Zz4K');
     background-size: cover;
   }
 }

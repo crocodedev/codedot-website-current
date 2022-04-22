@@ -28,6 +28,7 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
+          logo
           name
           title
           description
@@ -98,6 +99,7 @@ const IndexPage = ({ data, pathContext }) => {
     <>
       <SEO lang={langKey} frontmatter={metaDataNote.frontmatter} />
       <Navbar
+        logo={metaDataNote.frontmatter.logo}
         anchors={anchors}
         frontmatter={{ langKey, defaultLang, langTextMap, ...navBarNode.frontmatter }}
       />
