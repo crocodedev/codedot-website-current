@@ -28,6 +28,7 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
+          logo
           name
           title
           description
@@ -94,19 +95,11 @@ const IndexPage = ({ data, pathContext }) => {
     anchors,
   } = breakDownAllNodes(nodes)
 
-  React.useEffect(() => {
-    const replaceFrom = 'codedot.by'
-    const replaceTo = 'codedot.io'
-    const url = typeof window !== 'undefined' ? window.location.href : ''
-    if (url.toLowerCase().includes(replaceFrom)) {
-      window.location = url.replace(replaceFrom, replaceTo)
-    }
-  }, [])
-
   return (
     <>
       <SEO lang={langKey} frontmatter={metaDataNote.frontmatter} />
       <Navbar
+        logo={metaDataNote.frontmatter.logo}
         anchors={anchors}
         frontmatter={{ langKey, defaultLang, langTextMap, ...navBarNode.frontmatter }}
       />

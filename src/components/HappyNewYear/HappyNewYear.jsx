@@ -22,8 +22,8 @@ const HappyNewYear = () => {
     <>
       <SEO
         frontmatter={{
-          name: 'CODE DOT',
-          title: 'C Новым Годом! - CODE DOT',
+          // name: 'CODE DOT',
+          // title: 'C Новым Годом! - CODE DOT',
           description: '',
           keywords: [],
         }}

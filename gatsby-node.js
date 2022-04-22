@@ -1,6 +1,12 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 const path = require('path')
 const getBaseUrl = require('./src/utils/getBaseUrl')
-const { defaultLang, langTextMap = {} } = require('./config/site')
+
+const { DEFAULT_LANG: defaultLang, LANG_TEXT_MAP: langTextMap } = process.env
 
 /**
  * add fileName to node for markdown files
@@ -90,7 +96,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
             context: {
               langKey,
               defaultLang,
-              langTextMap,
+              langTextMap: JSON.parse(langTextMap),
             },
           })
         })

@@ -10,11 +10,9 @@ import LanguageSelector from 'components/LanguageSelector'
 import Icon from 'components/Icon'
 import NavItem from 'components/NavItem'
 
-import Logo from '../../../content/assets/images/logo.svg'
-
 import './Navbar.scss'
 
-const MyNavbar = ({ anchors, frontmatter }) => {
+const MyNavbar = ({ logo, anchors, frontmatter }) => {
   const { langKey, defaultLang, langTextMap } = frontmatter
 
   const handleScrollToTop = useSmoothScrollTo(0)
@@ -45,9 +43,11 @@ const MyNavbar = ({ anchors, frontmatter }) => {
       expanded={expanded}
     >
       <Container>
-        <Navbar.Brand className="cursor-pointer" onClick={handleBrandClick}>
-          <Logo />
-        </Navbar.Brand>
+        <Navbar.Brand
+          className="cursor-pointer"
+          onClick={handleBrandClick}
+          dangerouslySetInnerHTML={{ __html: logo }}
+        />
         <div className="d-flex order-lg-1">
           <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
           <Navbar.Toggle onClick={toggleMenu} aria-label="Toggle navigation">
@@ -67,6 +67,7 @@ const MyNavbar = ({ anchors, frontmatter }) => {
 }
 
 MyNavbar.propTypes = {
+  logo: PropTypes.string.isRequired,
   anchors: PropTypes.arrayOf(PropTypes.string),
   frontmatter: PropTypes.object,
 }

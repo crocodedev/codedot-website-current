@@ -67,7 +67,7 @@ const Contact = ({ className, frontmatter, langKey }) => {
               properties={{
                 iconContent: '',
                 balloonContent: balloon,
-                hintContent: 'CODE DOT',
+                hintContent: process.env.GATSBY_NAME,
               }}
               options={{
                 hideIconOnBalloonOpen: false,
