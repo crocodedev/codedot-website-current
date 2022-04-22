@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import './Technology.scss'
 
+// eslint-disable-next-line react/prop-types
 const Technology = ({ imageFileName, header, href }) => {
   const imgPart = (
     <div className="tech-wrap-img">

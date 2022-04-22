@@ -6,6 +6,7 @@ const DefOptions = {
 }
 
 const useSmoothScrollTo = (anchorOrPosition, options = {}) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const opts = { ...DefOptions, ...options }
 
   return useCallback(() => {
