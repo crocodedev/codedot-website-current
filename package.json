@@ -34,7 +34,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-remark": "^2.6.34",
     "gatsby-transformer-sharp": "^2.4.4",
-    "node-sass": "^7.0.1",
+    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
     "react": "^16.13.1",
@@ -100,6 +100,6 @@
     "url": "git+https://github.com/codedot-by/codedot.git"
   },
   "engines": {
-    "node": ">=14.17.0"
+    "node": "^14"
   }
 }
