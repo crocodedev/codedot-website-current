@@ -86,14 +86,8 @@ const IndexPage = ({ data, pathContext }) => {
   } = data
   const { langKey, defaultLang, langTextMap } = pathContext
 
-  const {
-    metaDataNote,
-    navBarNode,
-    topNode,
-    sectionsNodes,
-    footerNode,
-    anchors,
-  } = breakDownAllNodes(nodes)
+  const { metaDataNote, navBarNode, topNode, sectionsNodes, footerNode, anchors } =
+    breakDownAllNodes(nodes)
 
   return (
     <>
