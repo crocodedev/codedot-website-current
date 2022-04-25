@@ -6,11 +6,7 @@
       "components/*": ["src/components/*"],
       "containers/*": ["src/containers/*"],
       "hooks/*": ["src/hooks/*"],
-      "utils/*": ["src/utils/*"],
-
-      "config/*": ["config/*"],
-
-      "context/*": ["src/context/*"]
+      "utils/*": ["src/utils/*"]
     }
   },
   "exclude": ["node_modules", "public"]

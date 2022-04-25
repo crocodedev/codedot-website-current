@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import { animateScroll, scroller } from 'react-scroll'
 
 const DefOptions = {
@@ -6,8 +6,13 @@ const DefOptions = {
 }
 
 const useSmoothScrollTo = (anchorOrPosition, options = {}) => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const opts = { ...DefOptions, ...options }
+  const opts = useMemo(
+    () => ({
+      ...DefOptions,
+      ...options,
+    }),
+    [options],
+  )
 
   return useCallback(() => {
     switch (typeof anchorOrPosition) {

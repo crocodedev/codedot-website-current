@@ -1,34 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
-const Image = ({ fileName, alt, ...restProps }) => {
-  const { images } = useStaticQuery(graphql`
-    query ImageQuery {
-      images: allFile {
-        edges {
-          node {
-            relativePath
-            name
-            childImageSharp {
-              sizes(maxWidth: 1920) {
-                ...GatsbyImageSharpSizes
+const Image = ({ fileName, alt, ...restProps }) => (
+  <StaticQuery
+    query={graphql`
+      query BaseImageQuery {
+        images: allFile {
+          edges {
+            node {
+              relativePath
+              name
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
           }
         }
       }
-    }
-  `)
+    `}
+    render={({ images }) => {
+      const image = images.edges.find((n) => n.node.relativePath.includes(fileName))
 
-  const image = images.edges.find((n) => n.node.relativePath.includes(fileName))
+      if (!image) {
+        return null
+      }
 
-  if (!image) return null
-
-  const imageSizes = image.node.childImageSharp.sizes
-  return <Img alt={alt} sizes={imageSizes} {...restProps} loading="lazy" />
-}
+      const imageData = image.node.childImageSharp.gatsbyImageData
+      return <GatsbyImage alt={alt} image={imageData} {...restProps} />
+    }}
+  />
+)
 
 Image.propTypes = {
   fileName: PropTypes.string.isRequired,

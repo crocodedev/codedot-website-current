@@ -11,10 +11,6 @@ module.exports = {
           containers: './src/containers',
           hooks: './src/hooks',
           utils: './src/utils',
-
-          config: './config',
-
-          context: './src/context',
         },
       },
     ],

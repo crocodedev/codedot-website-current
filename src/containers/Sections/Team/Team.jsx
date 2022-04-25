@@ -25,9 +25,9 @@ const Team = ({ className, frontmatter }) => {
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>
       <Row className="justify-content-center">
-        {teamMember.map(({ header, ...tmProps }) => (
-          <Col sm={4} key={header}>
-            <TeamMember header={header} {...tmProps} />
+        {teamMember.map(({ imageFileName, ...tmProps }) => (
+          <Col sm={4} key={imageFileName}>
+            <TeamMember imageFileName={imageFileName} {...tmProps} />
           </Col>
         ))}
       </Row>

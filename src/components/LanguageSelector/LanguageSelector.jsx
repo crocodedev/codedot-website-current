@@ -17,7 +17,6 @@ const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
         title={<IconText iconName="LanguageIcon" text={langKey} />}
         id="language-dropdown"
         className="language-selector"
-        alignRight={true}
       >
         {Object.keys(langTextMap).map((key) => (
           <Link

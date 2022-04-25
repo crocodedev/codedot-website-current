@@ -15,6 +15,9 @@ import fileNameToSectionName from 'utils/fileNameToSectionName'
 
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
+// import 'swiper/scss'
+// import 'swiper/scss/autoplay'
+// import 'swiper/scss/grid'
 import '../style/main.scss'
 
 /**
@@ -80,11 +83,11 @@ export const query = graphql`
   }
 `
 
-const IndexPage = ({ data, pathContext }) => {
+const IndexPage = ({ data, pageContext }) => {
   const {
     allMarkdownRemark: { nodes },
   } = data
-  const { langKey, defaultLang, langTextMap } = pathContext
+  const { langKey, defaultLang, langTextMap } = pageContext
 
   const { metaDataNote, navBarNode, topNode, sectionsNodes, footerNode, anchors } =
     breakDownAllNodes(nodes)
@@ -95,7 +98,12 @@ const IndexPage = ({ data, pathContext }) => {
       <Navbar
         logo={metaDataNote.frontmatter.logo}
         anchors={anchors}
-        frontmatter={{ langKey, defaultLang, langTextMap, ...navBarNode.frontmatter }}
+        frontmatter={{
+          langKey,
+          defaultLang,
+          langTextMap,
+          ...navBarNode.frontmatter,
+        }}
       />
       <Top frontmatter={topNode.frontmatter} />
       {sectionsNodes.map(({ frontmatter, fields: { fileName } }, ind) => {
@@ -118,17 +126,11 @@ const IndexPage = ({ data, pathContext }) => {
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
-  pathContext: PropTypes.object,
-}
-
-IndexPage.defaultProps = {
-  pathContext: {
-    defaultLang: 'en',
-    langKey: 'en',
-    langTextMap: {
-      en: 'English',
-    },
-  },
+  pageContext: PropTypes.exact({
+    defaultLang: PropTypes.string,
+    langKey: PropTypes.string,
+    langTextMap: PropTypes.object,
+  }).isRequired,
 }
 
 export default IndexPage

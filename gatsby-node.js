@@ -1,8 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 const path = require('path')
 const getBaseUrl = require('./src/utils/getBaseUrl')
 

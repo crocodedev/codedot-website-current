@@ -9,10 +9,19 @@ const {
   DEFAULT_LANG: defaultLang,
   SITE_ENVIRONMENT: siteEnvironment,
   GATSBY_NAME: name,
+  GOOGLE_ANALYTICS_TRACKING_ID: trackingId,
 } = process.env
 
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId,
+        head: false,
+      },
+    },
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -42,19 +51,16 @@ module.exports = {
     },
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-transformer-sharp`,
-      options: {
-        checkSupportedExtensions: false,
-      },
-    },
+    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        data: `@import "core.scss";`,
-        includePaths: [path.resolve(__dirname, 'src/style')],
+        additionalData: `@import "core.scss";`,
+        sassOptions: {
+          includePaths: [path.resolve(__dirname, 'src/style')],
+        },
       },
     },
     {
@@ -75,12 +81,6 @@ module.exports = {
         langKeyDefault: defaultLang,
         useLangKeyLayout: false,
         pagesPaths: [`/content-${siteEnvironment}/`],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-217807340-1',
       },
     },
     'gatsby-plugin-netlify',
