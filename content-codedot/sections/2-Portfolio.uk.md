@@ -40,7 +40,7 @@ portfolios: [
     date: "2021-12"
   },
   {
-    imageFileName: "portfolio/05-thumbnail.jpg",
+    imageFileName: "portfolio/05-thumbnail.png",
     imageFileNameDetail: "portfolio/05-full.png",
     header: "Sculptor",
     subheader: " ",
@@ -49,7 +49,7 @@ portfolios: [
     date: "2020-09"
   },
   {
-    imageFileName: "portfolio/06-thumbnail.jpg",
+    imageFileName: "portfolio/06-thumbnail.png",
     imageFileNameDetail: "portfolio/06-full.png",
     header: "Blooming design",
     subheader: " ",

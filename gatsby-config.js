@@ -32,7 +32,7 @@ module.exports = {
         display: `standalone`,
         icon: `content-${siteEnvironment}/assets/icon.svg`,
         legacy: false,
-        cache_busting_mode: "none",
+        cache_busting_mode: 'none',
       },
     },
     'gatsby-transformer-remark',
@@ -61,11 +61,11 @@ module.exports = {
           quality: 50,
           breakpoints: [480, 1080, 1366, 1920],
           backgroundColor: `transparent`,
-        }
-      }
+        },
+      },
     },
     {
-      resolve: "gatsby-transformer-sharp",
+      resolve: 'gatsby-transformer-sharp',
       options: {
         checkSupportedExtensions: false,
       },
@@ -75,9 +75,9 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ["**/icon*"],
+          globPatterns: ['**/icon*'],
         },
-      }
+      },
     },
     {
       resolve: 'gatsby-plugin-sass',
