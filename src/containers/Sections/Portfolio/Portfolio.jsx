@@ -24,7 +24,7 @@ const Portfolio = ({ className, frontmatter, langKey }) => {
         {portfolios.map(
           ({ content, extraInfo, header, imageFileName, imageFileNameDetail, subheader, date }) => (
             <PortfolioItem
-              key={header}
+              key={imageFileName}
               imageFileName={imageFileName}
               header={header}
               subheader={subheader}
