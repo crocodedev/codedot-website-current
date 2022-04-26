@@ -21,7 +21,6 @@ module.exports = {
         head: false,
       },
     },
-    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -54,20 +53,24 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `dominantColor`,
+          quality: 50,
+          breakpoints: [480, 1080, 1366, 1920],
+          backgroundColor: `transparent`,
+        }
+      }
+    },
+    {
       resolve: "gatsby-transformer-sharp",
       options: {
         checkSupportedExtensions: false,
       },
     },
-    {
-      resolve: `gatsby-plugin-sharp`,
-      options: {
-        defaults: {
-          formats: [`auto`],
-          quality: 90,
-        },
-      },
-    },
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-offline',
       options: {
