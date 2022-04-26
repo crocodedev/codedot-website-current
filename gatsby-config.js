@@ -30,8 +30,10 @@ module.exports = {
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#222222',
-        display: 'minimal-ui',
+        display: `standalone`,
         icon: `content-${siteEnvironment}/assets/icon.svg`,
+        legacy: false,
+        cache_busting_mode: "none",
       },
     },
     'gatsby-transformer-remark',
@@ -51,7 +53,12 @@ module.exports = {
     },
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
+    {
+      resolve: "gatsby-transformer-sharp",
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -61,7 +68,14 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/icon*"],
+        },
+      }
+    },
     {
       resolve: 'gatsby-plugin-sass',
       options: {
@@ -93,4 +107,10 @@ module.exports = {
     },
     'gatsby-plugin-netlify',
   ],
+  flags: {
+    FAST_DEV: false, // Enable all experiments aimed at improving develop server start time
+    DEV_SSR: false, // (Umbrella Issue (https://gatsby.dev/dev-ssr-feedback)) · Server Side Render (SSR) pages on full reloads during develop. Helps you detect SSR bugs and fix them without needing to do full builds. See umbrella issue for how to update custom webpack config
+    PRESERVE_FILE_DOWNLOAD_CACHE: false, // (Umbrella Issue (https://gatsby.dev/cache-clearing-feedback)) · Don't delete the downloaded files cache when changing gatsby-node.js & gatsby-config.js files.
+    PARALLEL_SOURCING: false, // EXPERIMENTAL · (Umbrella Issue (https://gatsby.dev/parallel-sourcing-feedback)) · Run all source plugins at the same time instead of serially. For sites with multiple source plugins, this can speedup sourcing and transforming considerably
+  },
 }
