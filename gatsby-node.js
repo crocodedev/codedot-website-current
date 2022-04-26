@@ -1,7 +1,8 @@
 const path = require('path')
 const getBaseUrl = require('./src/utils/getBaseUrl')
 
-const { DEFAULT_LANG: defaultLang, LANG_TEXT_MAP: langTextMap } = process.env
+const { DEFAULT_LANG: defaultLang = 'en', LANG_TEXT_MAP: langTextMap = '{"en":"English"}' } =
+  process.env
 
 /**
  * add fileName to node for markdown files

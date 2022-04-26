@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import { Row } from 'react-bootstrap'
 import Slider from 'react-slick'
-// import { Swiper, SwiperSlide } from 'swiper/react'
-// import { Autoplay, Grid } from 'swiper'
 
 import PageSection from 'components/PageSection'
 import SectionHeader from 'components/SectionHeader'
@@ -79,61 +77,6 @@ const Technologies = ({ className, frontmatter }) => {
     ],
   }
 
-  /*
-  const config = {
-    modules: [Autoplay, Grid],
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    centeredSlides: true,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    speed: 2000,
-    grid: {
-      rows: 2,
-    },
-    breakpoints: {
-      450: {
-        slidesPerView: 2,
-      },
-      540: {
-        slidesPerView: 3,
-      },
-      670: {
-        slidesPerView: 4,
-        grid: {
-          rows: 1,
-        },
-      },
-      800: {
-        slidesPerView: 5,
-        grid: {
-          rows: 1,
-        },
-      },
-      821: {
-        slidesPerView: 6,
-        grid: {
-          rows: 1,
-        },
-      },
-      954: {
-        slidesPerView: 7,
-        grid: {
-          rows: 1,
-        },
-      },
-      1067: {
-        slidesPerView: 8,
-        grid: {
-          rows: 1,
-        },
-      },
-    },
-  }
-*/
-
   return (
     <PageSection fluid={true} className={clsx('tech px-0', className)} id={anchor}>
       <SectionHeader header={rootHeader} subheader={rootSubHeader} />
@@ -149,17 +92,6 @@ const Technologies = ({ className, frontmatter }) => {
           ))}
         </Slider>
       </Row>
-      {/*
-      <Row className="overflow-hidden">
-        <Swiper {...config}>
-          {technologies.map(({ href, imageFileName, header }) => (
-            <SwiperSlide key={imageFileName}>
-              <Technology href={href} imageFileName={imageFileName} header={header} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Row>
-*/}
     </PageSection>
   )
 }

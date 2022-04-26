@@ -6,10 +6,10 @@ require('dotenv').config({
 const path = require('path')
 
 const {
-  DEFAULT_LANG: defaultLang,
-  SITE_ENVIRONMENT: siteEnvironment,
-  GATSBY_NAME: name,
-  GOOGLE_ANALYTICS_TRACKING_ID: trackingId,
+  DEFAULT_LANG: defaultLang = 'en',
+  SITE_ENVIRONMENT: siteEnvironment = '',
+  GATSBY_NAME: name = 'SITE',
+  GOOGLE_ANALYTICS_TRACKING_ID: trackingId = 'UA-119418003-5',
 } = process.env
 
 module.exports = {
@@ -52,7 +52,15 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`webp`, `auto`],
+          quality: 90,
+        },
+      },
+    },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-sass',

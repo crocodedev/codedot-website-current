@@ -15,9 +15,6 @@ import fileNameToSectionName from 'utils/fileNameToSectionName'
 
 import 'slick-carousel/slick/slick.scss'
 import 'slick-carousel/slick/slick-theme.scss'
-// import 'swiper/scss'
-// import 'swiper/scss/autoplay'
-// import 'swiper/scss/grid'
 import '../style/main.scss'
 
 /**
