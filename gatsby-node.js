@@ -67,6 +67,16 @@ exports.createSchemaCustomization = ({ actions }) => {
  */
 exports.createPages = ({ graphql, actions: { createPage } }) => {
   const index = path.resolve('./src/templates/index.jsx')
+  const notFound = path.resolve('./src/templates/404.jsx')
+
+  createPage({
+    path: `/404`,
+    component: notFound,
+    context: {
+      langTextMap: JSON.parse(langTextMap),
+      defaultLang,
+    },
+  })
 
   return new Promise((resolve, reject) => {
     resolve(
