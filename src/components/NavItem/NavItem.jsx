@@ -8,6 +8,7 @@ import './NavItem.scss'
 const NavItem = ({ to, onClick, children }) => (
   <Nav.Item>
     <Link
+      href={`#${to}`}
       className="nav-link cursor-pointer"
       activeClass="active"
       to={to}

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import { Map, Placemark, YMaps, ZoomControl } from 'react-yandex-maps'
 import { Row } from 'react-bootstrap'
 
-import nl2br from 'utils/nl2br'
-
 import PageSection from 'components/PageSection'
+import nl2br from 'utils/nl2br'
 
 import './Contact.scss'
 

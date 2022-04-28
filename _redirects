@@ -1,0 +1,11 @@
+# CODE DOT
+http://codedot.by https://codedot.io 200
+https://codedot.by https://codedot.io 200
+http://codedot.by/* https://codedot.io/:splat 200
+https://codedot.by/* https://codedot.io/:splat 200
+
+# CROCODE
+http://cro.codes https://crocode.io 200
+https://cro.codes https://crocode.io 200
+http://cro.codes/* https://crocode.io/:splat 200
+https://cro.codes/* https://crocode.io/:splat 200

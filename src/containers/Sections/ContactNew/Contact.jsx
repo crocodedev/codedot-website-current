@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import { Row } from 'react-bootstrap'
 import ReactMapGL, { FullscreenControl, Marker, NavigationControl } from 'react-map-gl'
 
+import PageSection from 'components/PageSection'
 import nl2br from 'utils/nl2br'
 
-import PageSection from 'components/PageSection'
-
-import './ContactNew.scss'
+import './Contact.scss'
 
 const fullscreenControlStyle = {
   position: 'absolute',
@@ -23,7 +22,7 @@ const navStyle = {
   padding: '10px',
 }
 
-const ContactNew = ({ className, frontmatter }) => {
+const Contact = ({ className, frontmatter }) => {
   const [hasMounted, setHasMounted] = useState(false)
   const [viewport, setViewport] = useState({
     longitude: 30.21398,
@@ -149,7 +148,7 @@ const ContactNew = ({ className, frontmatter }) => {
 
   return (
     <PageSection className={`py-0 px-0 ${className}`} id={anchor} fluid={true}>
-      <Row className="contact-map-new">
+      <Row className="contact-map">
         <ReactMapGL
           {...viewport}
           {...settings}
@@ -188,16 +187,16 @@ const ContactNew = ({ className, frontmatter }) => {
   )
 }
 
-ContactNew.propTypes = {
+Contact.propTypes = {
   className: PropTypes.string,
   frontmatter: PropTypes.object,
   langKey: PropTypes.string,
 }
 
-ContactNew.defaultProps = {
+Contact.defaultProps = {
   className: null,
   frontmatter: null,
   langKey: 'en',
 }
 
-export default ContactNew
+export default Contact

@@ -19,6 +19,7 @@ module.exports = {
       options: {
         trackingId,
         head: false,
+        defer: true
       },
     },
     {
@@ -56,10 +57,10 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`],
-          placeholder: `dominantColor`,
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
           quality: 50,
-          breakpoints: [480, 1080, 1366, 1920],
+          breakpoints: [360, 600, 1080, 1366, 1920],
           backgroundColor: `transparent`,
         },
       },
@@ -86,18 +87,6 @@ module.exports = {
         sassOptions: {
           includePaths: [path.resolve(__dirname, 'src/style')],
         },
-      },
-    },
-    {
-      resolve: 'gatsby-omni-font-loader',
-      options: {
-        preconnect: ['https://fonts.gstatic.com'],
-        web: [
-          {
-            name: 'Comfortaa',
-            file: 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap',
-          },
-        ],
       },
     },
     {
