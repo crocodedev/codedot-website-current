@@ -1,11 +1,11 @@
 # CODE DOT
-http://codedot.by https://codedot.io
-https://codedot.by https://codedot.io
-http://codedot.by/* https://codedot.io/:splat
-https://codedot.by/* https://codedot.io/:splat
+http://codedot.by https://codedot.io 301!
+https://codedot.by https://codedot.io 301!
+http://codedot.by/* https://codedot.io/:splat 301!
+https://codedot.by/* https://codedot.io/:splat 301!
 
 # CROCODE
-http://cro.codes https://crocode.io
-https://cro.codes https://crocode.io
-http://cro.codes/* https://crocode.io/:splat
-https://cro.codes/* https://crocode.io/:splat
+http://cro.codes https://crocode.io 301!
+https://cro.codes https://crocode.io 301!
+http://cro.codes/* https://crocode.io/:splat 301!
+https://cro.codes/* https://crocode.io/:splat 301!
