@@ -1,0 +1,13 @@
+/* / 404
+
+# CODE DOT
+http://codedot.by https://codedot.io 301!
+https://codedot.by https://codedot.io 301!
+http://codedot.by/* https://codedot.io/:splat 301!
+https://codedot.by/* https://codedot.io/:splat 301!
+
+# CROCODE
+http://cro.codes https://crocode.io 301!
+https://cro.codes https://crocode.io 301!
+http://cro.codes/* https://crocode.io/:splat 301!
+https://cro.codes/* https://crocode.io/:splat 301!

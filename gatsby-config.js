@@ -97,7 +97,6 @@ module.exports = {
         pagesPaths: [`/content-${siteEnvironment}/`],
       },
     },
-    'gatsby-plugin-netlify',
   ],
   flags: {
     FAST_DEV: false, // Enable all experiments aimed at improving develop server start time
