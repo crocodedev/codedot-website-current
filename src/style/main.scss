@@ -139,6 +139,7 @@ a:not([href]):hover {
   padding-right: 20px;
   padding-bottom: 2px;
   color: $primary;
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;

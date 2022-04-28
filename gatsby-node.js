@@ -1,7 +1,7 @@
 const path = require('path')
 const getBaseUrl = require('./src/utils/getBaseUrl')
 
-const { DEFAULT_LANG: defaultLang = 'en', LANG_TEXT_MAP: langTextMap = '{"en":"English"}' } =
+const { DEFAULT_LANG: defaultLang = 'en', LANG_TEXT_MAP: langTextMap = '{"en":"English"}', MAP_CENTER: mapCenter } =
   process.env
 
 /**
@@ -103,6 +103,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
               langKey,
               defaultLang,
               langTextMap: JSON.parse(langTextMap),
+              mapCenter: JSON.parse(mapCenter)
             },
           })
         })

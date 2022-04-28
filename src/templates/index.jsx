@@ -84,7 +84,7 @@ const IndexPage = ({ data, pageContext }) => {
   const {
     allMarkdownRemark: { nodes },
   } = data
-  const { langKey, defaultLang, langTextMap } = pageContext
+  const { langKey, defaultLang, langTextMap, mapCenter } = pageContext
 
   const { metaDataNote, navBarNode, topNode, sectionsNodes, footerNode, anchors } =
     breakDownAllNodes(nodes)
@@ -113,6 +113,7 @@ const IndexPage = ({ data, pageContext }) => {
             className={ind % 2 === 1 ? 'bg-light' : null}
             frontmatter={frontmatter}
             langKey={langKey}
+            mapCenter={mapCenter}
           />
         ) : null
       })}
@@ -127,6 +128,7 @@ IndexPage.propTypes = {
     defaultLang: PropTypes.string,
     langKey: PropTypes.string,
     langTextMap: PropTypes.object,
+    mapCenter: PropTypes.array
   }).isRequired,
 }
 
