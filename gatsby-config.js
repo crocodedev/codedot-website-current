@@ -19,7 +19,7 @@ module.exports = {
       options: {
         trackingId,
         head: false,
-        defer: true
+        defer: true,
       },
     },
     {

@@ -12,17 +12,18 @@ const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, jump
 
   return (
     <Card className={clsx('image-card bg-dark text-white position-relative', className)}>
-      <Image className='image' fileName={imageFileName} alt={imageAlt || header || subheader} />
-      <Card.ImgOverlay className='no-padding'>
-        <Container className='pb-5'>
-          <div className='intro-text'>
+      <Image className="image" fileName={imageFileName} alt={imageAlt || header || subheader} />
+      <Card.ImgOverlay className="no-padding">
+        <Container className="pb-5">
+          <div className="intro-text">
             <div
-              className='d-flex flex-wrap intro-heading text-uppercase'
+              className="d-flex flex-wrap intro-heading text-uppercase"
               dangerouslySetInnerHTML={{
                 __html: header,
-              }} />
+              }}
+            />
             <div
-              className='intro-lead-in'
+              className="intro-lead-in"
               dangerouslySetInnerHTML={{
                 __html: subheader,
               }}
@@ -30,13 +31,13 @@ const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, jump
           </div>
         </Container>
       </Card.ImgOverlay>
-      <div className='text-center arrow-icon'>
+      <div className="text-center arrow-icon">
         <Link
           href="#Portfolio"
           className={arrow ? '' : 'hidden'}
           to={jumpToAnchor}
           spy={true}
-          smooth='easeInOutQuart'
+          smooth="easeInOutQuart"
           onClick={() => setArrow(false)}
         >
           <span />

@@ -84,7 +84,7 @@ const IndexPage = ({ data, pageContext }) => {
   const {
     allMarkdownRemark: { nodes },
   } = data
-  const { langKey, defaultLang, langTextMap, mapCenter } = pageContext
+  const { langKey, defaultLang, langTextMap, mapCenter, accessToken } = pageContext
 
   const { metaDataNote, navBarNode, topNode, sectionsNodes, footerNode, anchors } =
     breakDownAllNodes(nodes)
@@ -114,6 +114,7 @@ const IndexPage = ({ data, pageContext }) => {
             frontmatter={frontmatter}
             langKey={langKey}
             mapCenter={mapCenter}
+            accessToken={accessToken}
           />
         ) : null
       })}
@@ -128,7 +129,8 @@ IndexPage.propTypes = {
     defaultLang: PropTypes.string,
     langKey: PropTypes.string,
     langTextMap: PropTypes.object,
-    mapCenter: PropTypes.array
+    mapCenter: PropTypes.array,
+    accessToken: PropTypes.string,
   }).isRequired,
 }
 

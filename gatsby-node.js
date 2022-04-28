@@ -1,8 +1,12 @@
 const path = require('path')
 const getBaseUrl = require('./src/utils/getBaseUrl')
 
-const { DEFAULT_LANG: defaultLang = 'en', LANG_TEXT_MAP: langTextMap = '{"en":"English"}', MAP_CENTER: mapCenter } =
-  process.env
+const {
+  DEFAULT_LANG: defaultLang = 'en',
+  LANG_TEXT_MAP: langTextMap = '{"en":"English"}',
+  MAP_CENTER: mapCenter,
+  ACCESS_TOKEN: accessToken,
+} = process.env
 
 /**
  * add fileName to node for markdown files
@@ -103,7 +107,8 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
               langKey,
               defaultLang,
               langTextMap: JSON.parse(langTextMap),
-              mapCenter: JSON.parse(mapCenter)
+              mapCenter: JSON.parse(mapCenter),
+              accessToken,
             },
           })
         })
