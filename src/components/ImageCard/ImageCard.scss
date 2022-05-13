@@ -15,7 +15,7 @@
       width: 100%;
       height: 100%;
       content: '';
-      background-color: rgba($white, 0.25);
+      background-color: rgba($black, 0.25);
     }
   }
 
@@ -50,18 +50,11 @@
       font-size: 70px;
       font-weight: 700;
       line-height: 80px;
-      display: flex;
-      justify-content: center;
       margin-top: 80px;
       margin-bottom: 15px;
       letter-spacing: 10px;
-      color: var(--primary, $primary);
-    }
-
-    .intro-lead-in {
-      font-weight: 700;
-      text-align: center;
-      color: $gray-900;
+      justify-content: center;
+      display: flex;
     }
   }
 }
@@ -148,6 +141,7 @@
         line-height: 28px;
         margin-bottom: 50px;
         word-spacing: 0;
+        text-align: center;
 
         span {
           display: inline;
