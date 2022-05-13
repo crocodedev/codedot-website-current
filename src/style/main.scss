@@ -180,3 +180,7 @@ button {
   right: 0;
   left: unset;
 }
+
+.svg-color {
+  color: var(--primary, $primary);
+}

@@ -77,9 +77,10 @@ const Contact = ({ className, frontmatter, mapCenter, accessToken }) => {
                 width="80"
                 height="80"
                 viewBox="0 0 512 512"
+                className="svg-color"
                 style={{
                   cursor: 'pointer',
-                  fill: '#000',
+                  fill: 'currentColor',
                   stroke: 'none',
                 }}
                 onClick={onClickMarker}
