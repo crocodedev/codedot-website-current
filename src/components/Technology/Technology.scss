@@ -10,7 +10,7 @@
 
   &:hover {
     text-decoration: none;
-    color: $primary;
+    color: var(--primary, $primary);
 
     .tech-img {
       filter: opacity(100%);

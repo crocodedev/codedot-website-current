@@ -50,9 +50,15 @@
       font-size: 70px;
       font-weight: 700;
       line-height: 80px;
+      display: flex;
+      justify-content: center;
       margin-top: 80px;
       margin-bottom: 15px;
       letter-spacing: 10px;
+    }
+
+    .intro-lead-in {
+      text-align: center;
     }
   }
 }
@@ -92,8 +98,9 @@
     padding: 3px;
     transition: border 1.2s;
     transform: rotate(45deg);
-    border: solid $primary;
     border-width: 0 3px 3px 0;
+    border-style: solid;
+    border-color: var(--primary, $primary);
 
     &:nth-child(1) {
       animation: arrow-1 1.2s infinite;
@@ -167,111 +174,90 @@
 
 @keyframes arrow-1 {
   0% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   20% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   40% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   50% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 
   60% {
-    border: solid rgba($primary, 1);
-    border-width: 0 3px 3px 0;
+    opacity: 1;
   }
 
   80% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 
   100% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 }
 
 @keyframes arrow-2 {
   0% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 
   20% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   40% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   60% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   70% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 
   80% {
-    border: solid rgba($primary, 1);
-    border-width: 0 3px 3px 0;
+    opacity: 1;
   }
 
   100% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 }
 
 @keyframes arrow-3 {
   0% {
-    border: solid rgba($primary, 1);
-    border-width: 0 3px 3px 0;
+    opacity: 1;
   }
 
   20% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 
   40% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   60% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   80% {
-    border: solid rgba($primary, 0.1);
-    border-width: 0 3px 3px 0;
+    opacity: 0.1;
   }
 
   90% {
-    border: solid rgba($primary, 0.5);
-    border-width: 0 3px 3px 0;
+    opacity: 0.5;
   }
 
   100% {
-    border: solid rgba($primary, 1);
-    border-width: 0 3px 3px 0;
+    opacity: 1;
   }
 }

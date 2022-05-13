@@ -6,7 +6,7 @@
     right: 0;
     padding: 0.4rem 0.6rem;
     text-transform: uppercase;
-    color: $primary !important;
+    color: var(--primary, $primary) !important;
     border: 0;
     background-color: transparent;
 
@@ -16,18 +16,19 @@
 
     &:focus {
       outline: none;
+      box-shadow: none;
     }
   }
 
   .navbar-brand {
-    color: $primary !important;
+    color: var(--primary, $primary) !important;
     //text-shadow: 0 0 10px $gray-900, 0 0 30px $gray-900;
 
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      opacity: 0.9;
     }
 
     & svg {

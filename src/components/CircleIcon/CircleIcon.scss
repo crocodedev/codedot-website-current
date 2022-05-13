@@ -16,6 +16,6 @@
   &:focus,
   &:hover {
     color: white;
-    background-color: $primary;
+    background-color: var(--primary, $primary);
   }
 }

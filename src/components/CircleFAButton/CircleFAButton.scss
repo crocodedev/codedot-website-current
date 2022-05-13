@@ -6,5 +6,5 @@
   height: 128px;
   margin: auto;
   border-radius: 100%;
-  background: $primary;
+  background: var(--primary, $primary);
 }

@@ -16,8 +16,8 @@
 }
 
 .contact-info {
-  svg {
-    margin-top: 4px;
+  svg:first-child {
+    margin-bottom: 4px;
   }
 }
 
@@ -45,7 +45,7 @@
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 15%), 0 5px 15px -7px rgb(0 0 0 / 50%);
 
   svg {
-    color: $primary;
+    color: var(--primary, $primary);
   }
 
   .contact-body {
@@ -85,7 +85,7 @@
     width: 1px;
     height: 33px;
     content: ' ';
-    background-color: $primary;
+    background-color: var(--primary, $primary);
   }
 
   .close:before {

@@ -33,6 +33,7 @@ const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, jump
       </Card.ImgOverlay>
       <div className="text-center arrow-icon">
         <Link
+          aria-label="Next section"
           href="#Portfolio"
           className={arrow ? '' : 'hidden'}
           to={jumpToAnchor}

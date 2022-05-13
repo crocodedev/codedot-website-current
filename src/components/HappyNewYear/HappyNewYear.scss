@@ -56,7 +56,7 @@ html,
   &__logo-icon {
     width: 89px;
     height: 20px;
-    fill: $primary;
+    fill: var(--primary, $primary);
   }
 
   &__snowdrift-icon {
@@ -190,7 +190,7 @@ html,
       width: 26px;
       height: 2px;
       content: '';
-      background-color: $primary;
+      background-color: var(--primary, $primary);
     }
 
     &::before {

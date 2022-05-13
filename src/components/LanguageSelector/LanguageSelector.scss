@@ -4,7 +4,7 @@
   }
 
   #language-dropdown {
-    color: $primary !important;
+    color: var(--primary, $primary) !important;
 
     @media (min-width: 992px) {
       color: $gray-900 !important;
@@ -21,7 +21,7 @@
     &:hover,
     &.active,
     &:focus {
-      color: $primary !important;
+      color: var(--primary, $primary) !important;
       background-color: transparent;
     }
   }

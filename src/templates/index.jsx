@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
@@ -88,6 +88,10 @@ const IndexPage = ({ data, pageContext }) => {
 
   const { metaDataNote, navBarNode, topNode, sectionsNodes, footerNode, anchors } =
     breakDownAllNodes(nodes)
+
+  useEffect(() => {
+    document.documentElement.style.setProperty('--primary', process.env.GATSBY_MAIN_COLOR)
+  }, [])
 
   return (
     <>

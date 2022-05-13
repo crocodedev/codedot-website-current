@@ -34,7 +34,7 @@ p {
 }
 
 .text-primary {
-  color: $primary !important;
+  color: var(--primary, $primary) !important;
 }
 
 h1,
@@ -55,7 +55,7 @@ h6 {
 // Highlight color customization
 ::-moz-selection,
 ::selection {
-  background: $primary;
+  background: var(--primary, $primary);
   text-shadow: none;
 }
 
@@ -84,15 +84,15 @@ a:not([href]):hover {
 }
 
 .btn-primary {
-  border-color: $primary;
-  background-color: $primary;
+  border-color: var(--primary, $primary);
+  background-color: var(--primary, $primary);
 
   &:active,
   &:focus,
   &:hover {
     color: white;
-    border-color: darken($primary, 7.5%) !important;
-    background-color: darken($primary, 7.5%) !important;
+    border-color: var(--primary, $primary) !important;
+    background-color: var(--primary, $primary) !important;
   }
 
   &:active,
@@ -138,14 +138,16 @@ a:not([href]):hover {
 .custom-link {
   position: relative;
   margin-bottom: 3px;
-  padding-right: 20px;
   padding-bottom: 2px;
-  color: $primary;
+  color: var(--primary, $primary);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 
   &:hover {
     text-decoration: none;
-    color: $primary;
+    color: var(--primary, $primary);
   }
 
   &:after {
@@ -156,23 +158,11 @@ a:not([href]):hover {
     height: 0.5px;
     content: '';
     transition: 0.3s;
-    background: $primary;
+    background: var(--primary, $primary);
   }
 
   &:hover:after {
     width: 100%;
-  }
-
-  &:before {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 16px;
-    height: 16px;
-    content: '';
-    transform: translateY(-45%);
-    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTc5OTggNC44MzYwNkwxOS45NTEgNS4yMzYwNkwyMC40NTQgMTUuNTE5MSIgc3Ryb2tlPSIjNTk4OENFIi8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNNS4wMDEgMTkuMjk3TDE5LjA0MSA1LjUzMDAzTDE5LjY0MSA2LjE0MDAzTDUuNiAxOS45MDhMNSAxOS4yOThMNS4wMDEgMTkuMjk3WiIgZmlsbD0iIzU5ODhDRSIvPgo8L3N2Zz4K');
-    background-size: cover;
   }
 }
 
@@ -180,4 +170,13 @@ a:not([href]):hover {
   &:before {
     transform: translateY(-55%);
   }
+}
+
+button {
+  box-shadow: none !important;
+}
+
+.dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: unset;
 }
