@@ -36,6 +36,18 @@ module.exports = {
         cache_busting_mode: 'none',
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/*': [
+            'Cache-Control: no-cache, no-store, must-revalidate',
+            'Pragma: no-cache',
+            'Expires: 0',
+          ],
+        },
+      },
+    },
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
