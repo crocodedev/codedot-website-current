@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
 
@@ -11,6 +11,20 @@ import getBaseUrl from 'utils/getBaseUrl'
 import './LanguageSelector.scss'
 
 const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
+  const [langTextMapNew, setlangTextMapNew] = useState({})
+
+  useEffect(() => {
+    const filteredLangTextMap = {}
+
+    for (const key in langTextMap) {
+      if (key !== 'uk') {
+        filteredLangTextMap[key] = langTextMap[key]
+      }
+    }
+
+    setLangTextMapNew(filteredLangTextMap)
+  }, [langTextMap])
+
   if (langTextMap != null && Object.keys(langTextMap).length > 1)
     return (
       <NavDropdown
