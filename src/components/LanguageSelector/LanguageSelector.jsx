@@ -12,7 +12,7 @@ import './LanguageSelector.scss'
 
 const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
   const [langTextMapNew, setlangTextMapNew] = useState({})
-
+  console.log(langTextMap)
   useEffect(() => {
     const filteredLangTextMap = {}
 
