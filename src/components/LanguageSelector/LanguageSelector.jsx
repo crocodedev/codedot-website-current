@@ -21,8 +21,7 @@ const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
         filteredLangTextMap[key] = langTextMap[key]
       }
     }
-
-    setLangTextMapNew(filteredLangTextMap)
+    setlangTextMapNew(filteredLangTextMap)
   }, [langTextMap])
 
   if (langTextMap != null && Object.keys(langTextMap).length > 1)
@@ -32,7 +31,7 @@ const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
         id="language-dropdown"
         className="language-selector"
       >
-        {Object.keys(langTextMap).map((key) => (
+        {Object.keys(langTextMapNew).map((key) => (
           <Link
             key={key}
             to={getBaseUrl(defaultLang, key)}
