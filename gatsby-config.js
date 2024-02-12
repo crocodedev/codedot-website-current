@@ -7,7 +7,7 @@ const path = require('path')
 
 const {
   DEFAULT_LANG: defaultLang = 'en',
-  SITE_ENVIRONMENT: siteEnvironment = '',
+  SITE_ENVIRONMENT: siteEnvironment = 'codedot',
   GATSBY_NAME: name = 'SITE',
   GOOGLE_ANALYTICS_TRACKING_ID: trackingId = 'UA-119418003-5',
 } = process.env

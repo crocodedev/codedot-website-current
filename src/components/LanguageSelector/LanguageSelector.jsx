@@ -11,19 +11,7 @@ import getBaseUrl from 'utils/getBaseUrl'
 import './LanguageSelector.scss'
 
 const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
-  const [langTextMapNew, setlangTextMapNew] = useState({})
   console.log(langTextMap)
-  useEffect(() => {
-    const filteredLangTextMap = {}
-
-    for (const key in langTextMap) {
-      if (key !== 'uk') {
-        filteredLangTextMap[key] = langTextMap[key]
-      }
-    }
-    setlangTextMapNew(filteredLangTextMap)
-  }, [langTextMap])
-
   if (langTextMap != null && Object.keys(langTextMap).length > 1)
     return (
       <NavDropdown
@@ -31,7 +19,7 @@ const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
         id="language-dropdown"
         className="language-selector"
       >
-        {Object.keys(langTextMapNew).map((key) => (
+        {Object.keys(langTextMap).map((key) => (
           <Link
             key={key}
             to={getBaseUrl(defaultLang, key)}
@@ -42,7 +30,6 @@ const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
         ))}
       </NavDropdown>
     )
-
   return null
 }
 

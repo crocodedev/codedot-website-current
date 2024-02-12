@@ -3,8 +3,8 @@ const getBaseUrl = require('./src/utils/getBaseUrl')
 
 const {
   DEFAULT_LANG: defaultLang = 'en',
-  LANG_TEXT_MAP: langTextMap = '{"en":"English"}',
-  MAP_CENTER: mapCenter,
+  LANG_TEXT_MAP: langTextMap = '{"en":"English","ru":"Русский","de":"Deutsch"}',
+  MAP_CENTER: mapCenter = '[50.020982, 22.019343]',
   ACCESS_TOKEN: accessToken,
 } = process.env
 
