@@ -4,7 +4,7 @@ const getBaseUrl = require('./src/utils/getBaseUrl')
 const {
   DEFAULT_LANG: defaultLang = 'en',
   LANG_TEXT_MAP: langTextMap = '{"en":"English","ru":"Русский","de":"Deutsch"}',
-  MAP_CENTER: mapCenter = '[50.020982, 22.019343]',
+  MAP_CENTER: mapCenter = '[55.157916, 30.214336]',
   ACCESS_TOKEN: accessToken,
 } = process.env
 
