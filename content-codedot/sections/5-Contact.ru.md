@@ -5,5 +5,5 @@ subheader: " "
 skype: "poltorachenko"
 telegram: "avipo"
 email: "info@codedot.io"
-address: "Жешув, Польша"
+address: "Витебск, Беларусь"
 ---

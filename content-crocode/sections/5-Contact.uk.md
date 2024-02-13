@@ -5,5 +5,5 @@ subheader: " "
 skype: "poltorachenko"
 telegram: "avipo"
 email: "welcome@crocode.io"
-address: "Жешув, Польща"
+address: "Витебск, Беларусь"
 ---
